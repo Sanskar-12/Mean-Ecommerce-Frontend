@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { navigation } from '../../../Data/navigation';
 import { MatAnchor } from '@angular/material/button';
+import { navigation } from '../../../../../../Data/navigation';
 
 @Component({
   selector: 'app-navbar-content',

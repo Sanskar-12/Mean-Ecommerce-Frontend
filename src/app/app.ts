@@ -1,8 +1,9 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Home } from './home/home';
-import { Navbar } from './navbar/navbar';
-import { Footer } from './footer/footer';
+
+import { Footer } from './Module/shared/component/footer/footer';
+import { Home } from './Module/feature/component/home/home';
+import { Navbar } from './Module/shared/component/navbar/navbar';
 
 @Component({
   selector: 'app-root',

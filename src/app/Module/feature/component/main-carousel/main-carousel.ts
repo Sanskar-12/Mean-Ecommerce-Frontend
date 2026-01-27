@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { mainCarouselData } from '../../Data/main-carousel-data';
+import { mainCarouselData } from '../../../../../Data/main-carousel-data';
 
 @Component({
   selector: 'app-main-carousel',
