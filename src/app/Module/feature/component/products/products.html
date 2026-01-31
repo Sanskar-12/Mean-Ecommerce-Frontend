@@ -51,10 +51,48 @@
                 }
               }
             </div>
+            <mat-divider />
+            <div>
+              @for (item of singleFilterData; track $index; let isLast = $last) {
+                <div class="py-6">
+                  <span class="font-medium">
+                    {{ item.name }}
+                  </span>
+                  <div class="pt-6" id="filter-section-0">
+                    <div class="scroll-py-4">
+                      <div>
+                        @for (option of item.options; track $index) {
+                          <div class="flex items-center">
+                            <mat-radio-button
+                              id="'filter - '+option.value"
+                              [name]="item.id"
+                              [value]="option.value"
+                            >
+                              <span class="text-white">{{ option.label }}</span>
+                            </mat-radio-button>
+                          </div>
+                        }
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                @if (!isLast) {
+                  <mat-divider />
+                }
+              }
+            </div>
           </form>
         </div>
         <!-- Products Section -->
-        <div>Products</div>
+        <div class="lg:col-span-3">
+          <div class="flex flex-wrap justify-evenly">
+            <ng-container>
+              @for (item of menPants; track $index) {
+                <app-product-card [product]="item" />
+              }
+            </ng-container>
+          </div>
+        </div>
       </div>
     </section>
   </main>

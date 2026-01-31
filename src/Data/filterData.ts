@@ -27,12 +27,12 @@ export const singleFilter = [
     id: 'price',
     name: 'Price',
     options: [
-      { value: '159-399', label: 'ksh159 To 399' },
-      { value: '399-999', label: 'ksh399 To 999' },
-      { value: '999-1999', label: 'ksh999 To 1999' },
-      { value: '1999-2999', label: 'ksh1999 To 2999' },
-      { value: '2999-3999', label: 'ksh159 To 399' },
-      { value: '3999-4999', label: 'ksh3999 To 4999' },
+      { value: '159-399', label: '₹159 To ₹399' },
+      { value: '399-999', label: '₹399 To ₹999' },
+      { value: '999-1999', label: '₹999 To ₹1999' },
+      { value: '1999-2999', label: '₹1999 To ₹2999' },
+      { value: '2999-3999', label: '₹2999 To ₹3999' },
+      { value: '3999-4999', label: '₹3999 To ₹4999' },
     ],
   },
   {
@@ -53,8 +53,8 @@ export const singleFilter = [
     id: 'stock',
     name: 'availability',
     options: [
-      { value: 'in_stock', label: 'In_stock' },
-      { value: 'out_of_stock', label: 'Out_of_stock' },
+      { value: 'in_stock', label: 'In Stock' },
+      { value: 'out_of_stock', label: 'Out of Stock' },
     ],
   },
 ];
