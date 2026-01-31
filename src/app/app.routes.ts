@@ -10,6 +10,12 @@ import { Order } from './Module/feature/component/order/order';
 import { OrderDetails } from './Module/feature/component/order-details/order-details';
 
 export const routes: Routes = [
+  // setup for Admin Routes
+  {
+    path: 'admin',
+    loadChildren: () => import('../app/Module/admin/admin.routes').then((m) => m.adminRoutes),
+  },
+  // setup for Customer Routes
   {
     path: '',
     component: Home,
