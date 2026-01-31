@@ -1,31 +1,28 @@
-<div
-  class="productCard w-[17rem] rounded-2xl overflow-hidden bg-[#0b0b0b] shadow-lg cursor-pointer"
->
-  @for (item of products; track $index) {
-    <div class="h-[20rem] overflow-hidden">
-      <img class="h-full w-full object-cover" [src]="item.imageUrl" alt="Product Image" />
+<div class="productCard w-[17rem] rounded-2xl overflow-hidden bg-[#0b0b0b] cursor-pointer">
+  <div class="h-[20rem] overflow-hidden">
+    <img class="h-full w-full object-cover block" [src]="product.imageUrl" alt="Product Image" />
+  </div>
+
+  <!-- textPart must be separate and not constrained -->
+  <div class="textPart p-4 text-white bg-[#0b0b0b] relative">
+    <div class="space-y-1">
+      <p class="text-sm uppercase tracking-wide opacity-70">
+        {{ product.brand }}
+      </p>
+      <p class="font-semibold text-base leading-tight">
+        {{ product.title }}
+      </p>
+      <p class="text-sm text-gray-400">
+        {{ product.color }}
+      </p>
     </div>
 
-    <div class="textPart p-4 text-white">
-      <div class="space-y-1">
-        <p class="text-sm uppercase tracking-wide opacity-70">
-          {{ item.brand }}
-        </p>
-        <p class="font-semibold text-base leading-tight">
-          {{ item.title }}
-        </p>
-        <p class="text-sm text-gray-400">
-          {{ item.color }}
-        </p>
-      </div>
-
-      <div class="flex items-center gap-2 mt-3">
-        <p class="text-lg font-bold text-green-400">₹{{ item.discountedPrice }}</p>
-        <p class="text-sm text-gray-500 line-through">₹{{ item.price }}</p>
-        <span class="text-xs font-medium bg-green-600/20 text-green-400 px-2 py-0.5 rounded-full">
-          {{ item.discountPersent }}% OFF
-        </span>
-      </div>
+    <div class="flex items-center gap-2 mt-3">
+      <p class="text-lg font-bold text-green-400">₹{{ product.discountedPrice }}</p>
+      <p class="text-sm text-gray-500 line-through">₹{{ product.price }}</p>
+      <span class="text-xs font-medium bg-green-600/20 text-green-400 px-2 py-0.5 rounded-full">
+        {{ product.discountPersent }}% OFF
+      </span>
     </div>
-  }
+  </div>
 </div>
