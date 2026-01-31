@@ -6,10 +6,46 @@ import { MainCarousel } from './component/main-carousel/main-carousel';
 import { Feature } from './component/feature';
 import { HomeProductCard } from './component/home/home-product-card/home-product-card';
 import { Products } from './component/products/products';
+import { Cart } from './component/cart/cart';
+import { ProductDetails } from './component/product-details/product-details';
+import { Checkout } from './component/checkout/checkout';
+import { Payment } from './component/payment/payment';
+import { PaymentSuccess } from './component/payment-success/payment-success';
+import { Order } from './component/order/order';
+import { OrderDetails } from './component/order-details/order-details';
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, Home, ProductSlider, MainCarousel, Feature, HomeProductCard, Products],
-  exports: [Home, ProductSlider, MainCarousel, Feature, HomeProductCard, Products],
+  imports: [
+    CommonModule,
+    Home,
+    ProductSlider,
+    MainCarousel,
+    Feature,
+    HomeProductCard,
+    Products,
+    Cart,
+    ProductDetails,
+    Checkout,
+    Payment,
+    PaymentSuccess,
+    Order,
+    OrderDetails,
+  ],
+  exports: [
+    Home,
+    ProductSlider,
+    MainCarousel,
+    Feature,
+    HomeProductCard,
+    Products,
+    Cart,
+    ProductDetails,
+    Checkout,
+    Payment,
+    PaymentSuccess,
+    Order,
+    OrderDetails,
+  ],
 })
 export class FeatureModule {}
