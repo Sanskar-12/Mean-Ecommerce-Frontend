@@ -75,7 +75,86 @@
             </div>
           </div>
         </div>
+
+        <div class="col-span-5 mt-10 lg:mt-0">
+          <div class="box">
+            <h1 class="text-xl font-semibold pb-1">Product Ratings</h1>
+            <div class="flex items-center space-x-3 pb-10">
+              <app-star-rating />
+
+              <p class="opacity-60">3434 Ratings</p>
+            </div>
+            <div class="space-y-3">
+              <div>
+                <div class="grid grid-cols-12 justify-around items-center">
+                  <div class="col-span-2">
+                    <span>Excellent</span>
+                  </div>
+                  <div class="col-span-8 px-4">
+                    <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+                  </div>
+                  <div class="col-span-2">
+                    <span class="opacity-50">2323</span>
+                  </div>
+                </div>
+                <div class="grid grid-cols-12 justify-around items-center">
+                  <div class="col-span-2">
+                    <span>Very Good</span>
+                  </div>
+                  <div class="col-span-8 px-4">
+                    <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+                  </div>
+                  <div class="col-span-2">
+                    <span class="opacity-50">2323</span>
+                  </div>
+                </div>
+                <div class="grid grid-cols-12 justify-around items-center">
+                  <div class="col-span-2">
+                    <span>Good</span>
+                  </div>
+                  <div class="col-span-8 px-4">
+                    <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+                  </div>
+                  <div class="col-span-2">
+                    <span class="opacity-50">2323</span>
+                  </div>
+                </div>
+                <div class="grid grid-cols-12 justify-around items-center">
+                  <div class="col-span-2">
+                    <span>Average</span>
+                  </div>
+                  <div class="col-span-8 px-4">
+                    <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+                  </div>
+                  <div class="col-span-2">
+                    <span class="opacity-50">2323</span>
+                  </div>
+                </div>
+                <div class="grid grid-cols-12 justify-around items-center">
+                  <div class="col-span-2">
+                    <span>Poor</span>
+                  </div>
+                  <div class="col-span-8 px-4">
+                    <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+                  </div>
+                  <div class="col-span-2">
+                    <span class="opacity-50">2323</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2 class="text-lg text-gray-400 mb-6">Related Products</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      @for (item of relatedProducts; track $index) {
+        <app-product-card [product]="item" />
+      }
     </div>
   </section>
 </div>
