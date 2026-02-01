@@ -1,5 +1,5 @@
 <div class="productCard w-[17rem] rounded-2xl overflow-hidden bg-[#0b0b0b] cursor-pointer">
-  <div class="h-[20rem] overflow-hidden">
+  <div class="h-[20rem] overflow-hidden" (click)="navigate(`/product-details/${product.id}`)">
     <img class="h-full w-full object-cover block" [src]="product.imageUrl" alt="Product Image" />
   </div>
 
