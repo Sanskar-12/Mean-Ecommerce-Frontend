@@ -13,6 +13,7 @@ import { Payment } from './component/payment/payment';
 import { PaymentSuccess } from './component/payment-success/payment-success';
 import { Order } from './component/order/order';
 import { OrderDetails } from './component/order-details/order-details';
+import { ProductReviewCard } from './component/product-review-card/product-review-card';
 
 @NgModule({
   declarations: [],
@@ -31,6 +32,7 @@ import { OrderDetails } from './component/order-details/order-details';
     PaymentSuccess,
     Order,
     OrderDetails,
+    ProductReviewCard,
   ],
   exports: [
     Home,
@@ -46,6 +48,7 @@ import { OrderDetails } from './component/order-details/order-details';
     PaymentSuccess,
     Order,
     OrderDetails,
+    ProductReviewCard,
   ],
 })
 export class FeatureModule {}
