@@ -1,0 +1,25 @@
+<div class="grid grid-cols-1 gap-4 lg:grid-cols-12 px-5 lg:px-20">
+  <div class="col-span-1 lg:col-span-5">
+    <div class="rounded-md shadow-md h-[32.2rem] overflow-y-scroll hide-scrollbar box py-5">
+      <div class="p-5 py-7 cursor-pointer">
+        @for (item of addresses; track $index; let last = $last) {
+          <div class="py-2 space-y-2">
+            <app-address-card [address]="item" />
+
+            <button
+              style="padding: 1.6rem"
+              mat-raised-button
+              color="accent"
+              (click)="handleCreateOrder(item)"
+            >
+              Deliver here
+            </button>
+            @if (!last) {
+              <mat-divider />
+            }
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

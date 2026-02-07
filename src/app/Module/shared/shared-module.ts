@@ -6,10 +6,20 @@ import { NavbarContent } from './component/navbar/navbar-content/navbar-content'
 import { ProductCard } from './component/product-card/product-card';
 import { StarRating } from './component/star-rating/star-rating';
 import { CartItems } from './component/cart-items/cart-items';
+import { AddressCard } from './component/address-card/address-card';
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, Footer, Navbar, NavbarContent, ProductCard, StarRating, CartItems],
-  exports: [Footer, Navbar, NavbarContent, ProductCard, StarRating, CartItems],
+  imports: [
+    CommonModule,
+    Footer,
+    Navbar,
+    NavbarContent,
+    ProductCard,
+    StarRating,
+    CartItems,
+    AddressCard,
+  ],
+  exports: [Footer, Navbar, NavbarContent, ProductCard, StarRating, CartItems, AddressCard],
 })
 export class SharedModule {}

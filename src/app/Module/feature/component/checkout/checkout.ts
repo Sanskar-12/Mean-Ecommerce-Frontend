@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { AddressForm } from './address-form/address-form';
 
 @Component({
   selector: 'app-checkout',
-  imports: [],
+  imports: [AddressForm],
   templateUrl: './checkout.html',
   styleUrl: './checkout.scss',
 })
-export class Checkout {
-
-}
+export class Checkout {}
