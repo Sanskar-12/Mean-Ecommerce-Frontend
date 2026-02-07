@@ -5,10 +5,11 @@ import { Navbar } from './component/navbar/navbar';
 import { NavbarContent } from './component/navbar/navbar-content/navbar-content';
 import { ProductCard } from './component/product-card/product-card';
 import { StarRating } from './component/star-rating/star-rating';
+import { CartItems } from './component/cart-items/cart-items';
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, Footer, Navbar, NavbarContent, ProductCard, StarRating],
-  exports: [Footer, Navbar, NavbarContent, ProductCard, StarRating],
+  imports: [CommonModule, Footer, Navbar, NavbarContent, ProductCard, StarRating, CartItems],
+  exports: [Footer, Navbar, NavbarContent, ProductCard, StarRating, CartItems],
 })
 export class SharedModule {}
