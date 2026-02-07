@@ -14,6 +14,10 @@ import { PaymentSuccess } from './component/payment-success/payment-success';
 import { Order } from './component/order/order';
 import { OrderDetails } from './component/order-details/order-details';
 import { ProductReviewCard } from './component/product-review-card/product-review-card';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [],
