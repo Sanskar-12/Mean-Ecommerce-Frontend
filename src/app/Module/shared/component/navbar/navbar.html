@@ -12,11 +12,35 @@
     </div>
 
     <div class="flex items-center gap-3">
-      <button mat-icon-button>
+      <button mat-icon-button (click)="navigateTo('/cart')">
         <mat-icon>shopping_cart</mat-icon>
       </button>
 
-      <button mat-raised-button color="accent">Login</button>
+      @if (false) {
+        <button mat-raised-button color="accent">Login</button>
+      }
+
+      @if (true) {
+        <div class="relative ml-3 flex items-center">
+          <div class="flex items-center space-x-5">
+            <span class="font-bold text-lg">Sanskar</span>
+            <div>
+              <button matButton [matMenuTriggerFor]="profileMenu">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1ACB23aGarmIJwYpZNCOSA9rIuQIa9_HYfA&s"
+                  alt="Profile Image"
+                  class="h-7 w-7"
+                />
+              </button>
+              <mat-menu #profileMenu="matMenu">
+                <button mat-menu-item (click)="navigateTo('/account/orders')">Orders</button>
+                <button mat-menu-item>Profile</button>
+                <button mat-menu-item>Logout</button>
+              </mat-menu>
+            </div>
+          </div>
+        </div>
+      }
     </div>
   </div>
 

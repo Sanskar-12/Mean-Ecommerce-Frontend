@@ -2,7 +2,7 @@ import { Component, HostListener } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { NavbarContent } from './navbar-content/navbar-content';
 
 @Component({
@@ -24,7 +24,11 @@ export class Navbar {
     this.isNavbarContentOpen = false;
   }
 
-  navigateTo(path: any) {}
+  constructor(private router: Router) {}
+
+  navigateTo(path: any) {
+    this.router.navigate([path]);
+  }
 
   @HostListener('document:click', [`$event`])
   onDocumentClick(event: MouseEvent) {
