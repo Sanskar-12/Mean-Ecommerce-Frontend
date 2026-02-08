@@ -6,7 +6,7 @@
           @if (cart) {
             @for (product of cart; track $index; let last = $last) {
               <div>
-                <app-cart-items />
+                <app-cart-items [showButton]="true" />
                 @if (!last) {
                   <mat-divider />
                 }

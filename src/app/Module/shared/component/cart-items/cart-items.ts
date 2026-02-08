@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatAnchor, MatButton, MatFabButton, MatMiniFabButton } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
@@ -10,6 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class CartItems {
   quantity = 1;
+  @Input() showButton: any;
 
   updateCartItems(num: Number) {}
 
