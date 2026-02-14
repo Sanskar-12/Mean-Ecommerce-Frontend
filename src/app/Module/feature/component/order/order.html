@@ -20,7 +20,7 @@
       @for (item of orders; track $index) {
         <div class="space-y-5">
           @for (orderItem of item; track $index) {
-            <div>
+            <div class="cursor-pointer" (click)="navigateToOrderDetails(4)">
               <app-order-card />
             </div>
           }
